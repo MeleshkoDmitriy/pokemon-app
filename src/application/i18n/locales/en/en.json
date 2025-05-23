@@ -1,0 +1,25 @@
+{
+    "Screens": {
+        "Home": {
+            "Title": "Home"
+        },
+        "Settings": {
+            "Title": "Settings",
+            "LanguageSettings": "LanguageSettings"
+        }
+    },
+    "Common": {
+        "Save": "Save",
+        "Cancel": "Cancel",
+        "Delete": "Delete",
+        "Edit": "Edit",
+        "Add": "Add",
+        "Search": "Search",
+        "Select": "Select",
+        "Close": "Close"
+    },
+    "tabs": {
+        "home": "Home",
+        "settings": "Settings"
+    }
+}

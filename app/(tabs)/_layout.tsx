@@ -2,14 +2,14 @@ import { Colors } from '@/constants/Colors';
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Platform, StyleSheet, useColorScheme } from 'react-native';
+import { Platform, SafeAreaView, useColorScheme } from 'react-native';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   const { t } = useTranslation();
 
   return (
-    <>
+    <SafeAreaView style={{ flex: 1 }}>
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -17,9 +17,6 @@ export default function TabLayout() {
           tabBarStyle: Platform.select({
             ios: {
               position: 'absolute',
-              bottom: 0,
-              left: 0,
-              right: 0,
             },
             default: {},
           }),
@@ -28,24 +25,16 @@ export default function TabLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: t('Home'),
+            title: t('Screens.Home.Title'),
           }}
         />
         <Tabs.Screen
           name="settings"
           options={{
-            title: t('Settings'),
+            title: t('Screens.Settings.Title'),
           }}
         />
       </Tabs>
-    </>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
-  },
-});

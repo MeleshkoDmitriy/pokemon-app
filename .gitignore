@@ -71,3 +71,7 @@ ios/UserInterfaceState.xcuserstate
 ios/ios.xcworkspace/xcuserdata/
 ios/ios.xcodeproj/xcuserdata/
 ios/ios.xcodeproj/project.xcworkspace/xcuserdata/
+
+# VS Code
+.vscode/
+*.code-workspace

@@ -1,10 +1,12 @@
 import { Colors } from '@/constants/Colors';
 import { Tabs } from 'expo-router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Platform, StyleSheet, useColorScheme } from 'react-native';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -26,13 +28,13 @@ export default function TabLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: 'Home',
+            title: t('Home'),
           }}
         />
         <Tabs.Screen
-          name="explore"
+          name="settings"
           options={{
-            title: 'Explore',
+            title: t('Settings'),
           }}
         />
       </Tabs>

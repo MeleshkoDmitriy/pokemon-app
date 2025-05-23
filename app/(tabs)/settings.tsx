@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { ScrollView, StyleSheet, Text } from 'react-native';
 
-export default function ExploreScreen() {
+export default function SettingsScreen() {
+  const { t } = useTranslation();
   return (
     <ScrollView style={styles.container}>
-      <Text>Explore</Text>
+      <Text>{t('Settings')}</Text>
     </ScrollView>
   );
 }

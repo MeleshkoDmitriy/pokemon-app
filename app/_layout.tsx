@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { Platform, SafeAreaView, StyleSheet } from 'react-native';
 import 'react-native-reanimated';
+import '@/src/i18n';
 
 export default function RootLayout() {
   const [loaded] = useFonts({
